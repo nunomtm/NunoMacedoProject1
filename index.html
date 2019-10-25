@@ -13,11 +13,9 @@
 
 <body>
 
-    <header>
+    <header class="clearfix">
         <div class="main-nav wrapper">
             <h2 class="logo">Panda Sanctuary</h2>
-
-            
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -26,6 +24,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <i class="fa fa-bars"></i>
         </div>
         <div class="headline wrapper">
             <h1>A safe and loving place for all pandas</h1>
@@ -34,6 +33,7 @@
             <a href="http://instagram.com">
                 <i class="fab fa-instagram" aria-hidden="true"></i>
                 <span class="visuallyhidden">Instagram</span>
+                <!-- <span class="sr-only">Time by walking:</span> -->
             </a>
             <a href="http://facebook.com">
                 <i class="fab fa-facebook" aria-hidden="true"></i>
@@ -51,59 +51,65 @@
     </header>
 
     <main>
-        <section>
-            <h2 class="tittle">Our new friends</h2>
-            <div>
-                <img src="./Panda-Sanctuary-assets/gallery-image-1.jpg" alt="">
-                <img src="./Panda-Sanctuary-assets/gallery-image-2.jpg" alt="">
-                <img src="./Panda-Sanctuary-assets/gallery-image-3.jpg" alt="">
-            </div>
-
-            <div>
-                <figure>
-                    <img src="./Panda-Sanctuary-assets/small-box.jpg" alt="">
-                </figure>
-                <h2>More about our park</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dignissimos assumenda et odio praesentium molestias ullam dicta laudantium rerum modi, cupiditate hic sunt mollitia. Beatae necessitatibus at aperiam, impedit voluptatibus fuga molestiae modi excepturi odit architecto exercitationem, commodi eveniet deleniti laudantium velit accusantium dolorem ex laboriosam distinctio. Officiis accusantium quasi autem hic ab! Ut maiores aliquid nemo minus tenetur odio eveniet, suscipit a ea beatae aspernatur, quo saepe ducimus quos.</p>
-                <button>Read More</button>
+        <section class="about">
+            <div class="wrapper clearfix">
+                <h2 class="tittle">Our New Friends</h2>
+                <ul class="gallery">
+                    <li><img src="./Panda-Sanctuary-assets/gallery-image-1.jpg" alt=""></li>
+                    <li><img src="./Panda-Sanctuary-assets/gallery-image-2.jpg" alt=""></li>
+                    <li><img src="./Panda-Sanctuary-assets/gallery-image-3.jpg" alt=""></li>
+                </ul>
+    
+                <div>
+                    <figure>
+                        <img src="./Panda-Sanctuary-assets/small-box.jpg" alt="">
+                    </figure>
+                    <div class="side">
+                    	<h2 class="sub-tittle">More about our park</h2>
+                    	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae adipisci corrupti impedit, nemo non nam natus doloribus facere dignissimos enim quisquam vitae fugiat cum quos recusandae iure animi sequi voluptatum commodi earum provident. Quidem placeat debitis voluptate hic saepe quisquam nostrum eaque explicabo? Eaque odio recusandae deserunt voluptas minus.</p>
+                    	<button>Read More</button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="wrapper">
-            <div class="baby-pandas">
-                <div>
-                    <h2 class="tittle">Bobby and Bella</h2>
+        <section class="meet-pandas">
+            <div class="clearfix">
+                <div class="pandas-description wrapper">
+                    <h2 class="sub-tittle">Bobby and Bella</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente minima tenetur saepe odit expedita voluptates amet pariatur hic mollitia officiis quia enim, porro officia laboriosam quidem quasi natus? Ducimus itaque aliquam, vel aut illo dolorem odio ea voluptatem natus! Consectetur?</p>
                     <button>Read More</button>
                 </div>
-                <figure>
+                <div class="pandas">
                     <img src="./Panda-Sanctuary-assets/right-image.jpg" alt="">
-                </figure>
+                </div>
             </div>
-            <div class="panda-bamboo">
-                <div>
-                    <h2 class="tittle">Look at Marco now</h2>
+
+            <div class="clearfix">
+                <div class="marco">
+                    <img src="./Panda-Sanctuary-assets/left-image.jpg" alt="">
+                </div>
+                <div class="marco-now wrapper">
+                    <h2 class="sub-tittle">Look at Marco now</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente minima tenetur saepe odit expeditavoluptates amet pariatur hic mollitia officiis quia enim, porro officia laboriosam quidem quasi natus?Ducimus itaque aliquam, vel aut illo dolorem odio ea voluptatem natus! Consectetur?</p>
                     <button>Read More</button>
                 </div>
-                <figure>
-                    <img src="./Panda-Sanctuary-assets/left-image.jpg" alt="">
-                </figure>
             </div>
         </section>
-        <section class="wrapper">
-            <div class="icons">
-                <a href="">
+
+        <section class="icon clearfix">
+            <div class="icons wrapper">
+                <a href="" class="logos">
                     <i class="fas fa-gift" aria-hidden="true"></i>
                     <span class="visuallyhidden">Donations</span>
                     <h4>Donations</h4>
                 </a>
-                <a href="">
+                <a href="" class="logos">
                     <i class="fas fa-briefcase" aria-hidden="true"></i>
                     <span class="visuallyhidden">Jobs</span>
                     <h4>Jobs</h4>
                 </a>
-                <a href="">
+                <a href="" class="logos">
                     <i class="fas fa-calendar-check" aria-hidden="true"></i>
                     <span class="visuallyhidden">Events</span>
                     <h4>Events</h4>
@@ -114,7 +120,7 @@
 
     <footer>
         <div class="footer-container">
-            <div class="wrapper main-footer">
+            <div class="wrapper main-footer clearfix">
                 <div class="newsletter">
                     <h3>Stay updated</h3>
                     <p>Subscribe to our newsletter to stay updated.</p>
@@ -131,10 +137,10 @@
                 </div>
                 <div class="links">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact</a></li>
                     </ul>
                 </div>
             </div>

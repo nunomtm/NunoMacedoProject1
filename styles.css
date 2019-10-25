@@ -8,3 +8,339 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+/* Global Styles Start Here */
+html {
+    font-family: 'Offside', cursive;
+    font-family: 'Barlow', sans-serif;
+    font-size: 62.5%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* Global Styles Ends Here */
+
+
+/* Header Styles Starts Here */
+header {
+    background-image: url(./Panda-Sanctuary-assets/header-image.jpg);
+    background-size: cover;
+    min-height: 90vh;
+}
+
+/* header i {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.5rem;
+    visibility: hidden;
+} */
+
+.logo {
+    font-family: 'Offside', cursive;
+    font-size: 2rem;
+    color: #fff;
+    width: 120px;
+    padding: 10px 0;
+    margin: 0;
+    float: left;
+}
+
+nav {
+    float: right;
+    padding-top: 15px;
+}
+
+nav li {
+    float: left;
+    line-height: 29px;
+}
+
+nav a {
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 20px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.headline h1 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 6.88rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 63.7px;
+    letter-spacing: 0.8px;
+    width: 550px;
+    margin: 0;
+    padding: 80px 0;
+    float: left;
+}
+
+.social {
+    float: right;
+    padding: 80px 0;
+}
+
+.social i {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    display: block;
+    margin-right: 50px;
+}
+
+/* Header Styles Ends Here */
+
+
+/* Main Styles Starts Here */
+
+.about {
+    background-color: #D6F1E4;
+}
+
+.tittle {
+    font-family: 'Offside', cursive;
+    font-size: 4.2rem;
+    font-weight: 300;
+    color: #116500;
+    text-align: center;
+    margin: 0;
+    padding: 60px 0;
+}
+
+.gallery li {
+    float: left;
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 80px;
+}
+
+.gallery li:nth-of-type(3) {
+    margin-right: 0;
+}
+
+figure {
+    margin: 0;
+    padding-bottom: 80px;
+    max-width: 25%;
+    float: left;
+}
+
+.side {
+    float: left;
+    max-width: calc(75% - 40px);
+    margin-left: 40px;
+}
+
+.sub-tittle {
+    font-family: 'Offside', cursive;
+    font-size: 4.2rem;
+    font-weight: 300;
+    color: #116500;
+    margin: 0;
+    padding: 0;
+}
+
+.side p,
+.meet-pandas p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+button {
+    font-family: 'Offside', cursive;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 29px;
+    color: #fff;
+    background-color: #116500;
+    padding: 10px 30px;
+}
+
+.meet-pandas {
+    background-color: #213C28;
+}
+
+.meet-pandas h2,
+.meet-pandas p {
+    color: #fff;
+    max-width: 50%;
+}
+
+.meet-pandas h2 {
+    padding: 60px 0;
+}
+
+.meet-pandas p {
+    margin-bottom: 40px;
+    padding-right: 20px;
+}
+
+.meet-pandas button {
+    background-color: #fff;
+    color: #116500;
+    transition: 0.25s;
+}
+
+.meet-pandas button:hover {
+    background-color: #116500;
+    color: #fff;
+}
+
+.pandas-descriptio {
+    float: left;
+}
+
+.pandas {
+    float: right;
+    width: calc(50% - 1px);
+    margin-top: -462px;
+}
+
+.marco {
+    float: left;
+    width: calc(50% - 1px);
+}
+
+.marco-now {
+    float: right;
+}
+
+.icon {
+    background: #D6F1E4;
+    padding: 40px 0;
+}
+
+.icons i {
+    color: #213C28;
+    font-size: 4rem;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+.icons h4 {
+    font-family: 'Offside', cursive;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #116500;
+    transition: 0.25s;
+}
+
+.logos {
+    width: calc((100% / 3) - 40px);
+    margin-right: 20px;
+    text-align: center;
+    float: left;
+}
+
+.logos:nth-of-type(3) {
+    margin-right: 0;
+}
+
+
+/* Footer Styles Starts Here */
+
+footer {
+    background-color: #116500;
+}
+
+footer h3,
+footer a {
+    font-family: 'Offside', cursive;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    color: #fff;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.main-footer {
+    padding: 60px 0;
+}
+
+.newsletter,
+.contact,
+.links {
+    width: calc((100% / 3) - 20px);
+    margin-right: 10px;
+    float: left;
+}
+
+.main-footer:nth-of-type(3){
+    margin-right: 0;
+}
+
+input[type="email"] {
+    padding: 0 25px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input[type="submit"] {
+    font-family: 'Offside', cursive;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2px 14px;
+    text-transform: uppercase;
+    background-color: #2C2D2C;
+    border-color: #2C2D2C;
+    color: #fff;
+}
+
+.links ul li {
+    padding-bottom: 10px;
+}
+
+.sub-footer {
+    background-color: #2C2D2C;
+    padding: 10px;
+}
+
+.sub-footer p {
+    text-align: center;
+}
