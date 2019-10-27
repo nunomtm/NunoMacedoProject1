@@ -17,14 +17,24 @@ html {
 }
 
 .wrapper {
-    width: 80%;
     max-width: 1080px;
+    width: 80%;
     margin: 0 auto;
 }
 
 img {
-    display: block;
     max-width: 100%;
+    display: block;
+}
+
+h1 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 6.88rem;
+    line-height: 6.37rem;
+    letter-spacing: 0.8px;
+    color: #fff;
+    width: 550px;
 }
 
 ul {
@@ -49,10 +59,10 @@ button {
     text-align: center;
     text-transform: uppercase;
     line-height: 29px;
-    padding: 10px 30px;
     color: #fff;
     background-color: #116500;
     border: #116500;
+    padding: 10px 30px;
 }
 /* Global Styles Ends Here */
 
@@ -66,22 +76,24 @@ header {
     min-height: 90vh;
 }
 
+/* Hamburber menu for the mobile version */
 .main-nav i {
-    position: absolute;
     font-size: 1.5rem;
+    position: absolute;
+    visibility: hidden;
     top: 2%;
     right: 10%;
-    visibility: hidden;
 }
+/* - */
 
 .logo {
     font-family: 'Offside', cursive;
     font-size: 2rem;
     color: #fff;
     width: 120px;
+    float: left;
     padding: 10px 15px;
     margin: 0;
-    float: left;
 }
 
 nav {
@@ -121,26 +133,16 @@ nav a:hover {
     margin-left: 12.5%;
 }
 
-.headline h1 {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-    font-size: 6.88rem;
-    line-height: 6.37rem;
-    letter-spacing: 0.8px;
-    color: #fff;
-    width: 550px;
-}
-
 .social {
     float: right;
     padding: 5% 2% 0 0;
 }
 
 .social i {
-    display: block;
     font-size: 2.5rem;
     text-align: center;
     color: white;
+    display: block;
     padding: 6px;
     transition: 0.2s;
 }
@@ -151,7 +153,7 @@ nav a:hover {
 /* Header Styles Ends Here */
 
 
-/* /* Main Styles Starts Here */ */
+/* /* - Main Styles Starts Here - */ */
 
 /* About Styles Ends Here */
 .about {
@@ -162,8 +164,8 @@ nav a:hover {
     font-family: 'Offside', cursive;
     font-size: 4.2rem;
     font-weight: 300;
-    color: #116500;
     text-align: center;
+    color: #116500;
     margin: 0;
     padding: 60px 0;
 }
@@ -198,7 +200,7 @@ figure {
 
 .side button:hover {
     background-color: #fff;
-    border: #fff;
+    border: 1px solid #116500;
     color: #213C28;
 }
 
@@ -241,9 +243,9 @@ figure {
 }
 
 .meet-pandas p {
+    width: 95%;
     margin: 0;
     padding-bottom: 60px;
-    width: 95%;
 }
 
 .meet-pandas button {
@@ -283,14 +285,14 @@ figure {
 
 
 /* Icon Styles Start Here */
-.icon {
+.icons-container {
     background: #D6F1E4;
     padding: 40px 0;
 }
 
 .icons i {
-    color: #213C28;
     font-size: 4rem;
+    color: #213C28;
     transition: 0.25s;
 }
 
@@ -315,9 +317,9 @@ figure {
 }
 
 .logos {
+    float: left;
     width: calc(100% / 3);
     text-align: center;
-    float: left;
 }
 
 .logos:nth-of-type(3) {
@@ -360,54 +362,54 @@ footer p {
 }
 
 .newsletter {
+    float: left;
     width: calc(50% - 10px);
     margin-right: 5px;
-    float: left;
 }
 
 .contact {
+    float: left;
     width: calc(40% - 10px);
     margin-right: 5px;
-    float: left;
 }
 
 .links {
+    float: left;
     width: 10%;
     margin-right: 0;
-    float: left;
 }
 
 .newsletter h2,
 .contact h2,
 .links a {
-    transition: 0.2s;
-    border-bottom: 3px solid transparent;
     width: 70%;
+    border-bottom: 3px solid transparent;
+    transition: 0.2s;
 }
 
 .newsletter h2:hover,
 .contact h2:hover,
 .links a:hover {
-    border-bottom: 3px solid #116500;
     width: 70%;
+    border-bottom: 3px solid #116500;
 }
 
 input[type="email"] {
+    font-size: 1.5rem;
     width: 70%;
     padding: 5px;
     padding-left: 20px;
-    font-size: 1.5rem;
 }
 
 button[type="submit"] {
     font-family: 'Offside', cursive;
     font-size: 1.5rem;
     font-weight: 300;
-    padding: 3px 18px;
     text-transform: uppercase;
+    color: #fff;
     background-color: #2C2D2C;
     border: none;
-    color: #fff;
+    padding: 3px 18px;
     transition: 0.2s;
 }
 
@@ -431,9 +433,12 @@ button[type="submit"]:hover {
 /* Footer styles Ends Here */
 
 
-/* RESPONSIVE DESIGN STARTS BELOW */
+/* /* - RESPONSIVE DESIGN STARTS BELOW - */
 
 @media (max-width: 1350px) {
+    header {
+        background-size: 1350px 930px;
+    }
 
     .headline h1 {
         font-size: 4.88rem;
@@ -460,7 +465,8 @@ button[type="submit"]:hover {
     }
 
     .social i {
-        display: inline;
+        visibility: hidden;
+        display: none;
     }
 
 }
@@ -487,19 +493,21 @@ button[type="submit"]:hover {
     }
 
     /* To invert the image and text */
-    /* .pandas-description.wrapper {
+    .pandas-container {
         position: relative;
     }
 
     .pandas-description {
-        position: absolute;
-        top: 100%
+        padding-top: 60%;
     }
 
     .pandas {
         position: absolute;
-        top: -100%;
-    } */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 
     .pandas-container button {
         margin-bottom: 60px;
@@ -509,8 +517,8 @@ button[type="submit"]:hover {
 @media (max-width: 950px){
     .main-nav i {
         display: block;
-        visibility: visible;
         font-size: 3.5rem;
+        visibility: visible;
         color: #fff;
     }
 
@@ -524,7 +532,10 @@ button[type="submit"]:hover {
         max-width: 300px;
     }
 
-    /* Not sure if it is correct this way */
+    header {
+        background-size: 1000px 930px;
+    }
+
     #about > div:nth-child(1) > div:nth-child(3) > figure:nth-child(1) {
         max-width: 100%;
         margin-left: 30%;
@@ -532,6 +543,34 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 880px){
+     .logo {
+        font-size: 1.5rem;
+    }
+
+    .main-nav i {
+        top: 1%;
+    }
+    
+    .gallery li {
+        width: calc((100% - 40px) / 2);
+        margin-right: 20px;
+        margin-bottom: 60px;
+    }
+
+    .gallery li:nth-of-type(2) {
+        float: right;
+        margin-right: 0;
+    }
+
+    .gallery li:nth-of-type(3) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery > li:nth-child(3) > img:nth-child(1) {
+        width: 100%;
+    }
+    
     .about .sub-tittle {
         font-size: 3.2rem;
     }
@@ -542,48 +581,33 @@ button[type="submit"]:hover {
     }
 }
 
-@media (max-width: 880px){
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .main-nav i {
-        top: 1%;
-    }
-}
-
 @media (max-width: 768px) {
-    /* Need to recise the background image */
-    /* header {
-
-    } */
-
-    .gallery li {
-        width: calc((100% - 40px) / 2);
-        margin-right: 20px;
-        margin-bottom: 60px;
+    /* Need to resize the background image */
+    header {
+        background-size: 1024px 930px;
     }
 
-    .gallery li:nth-of-type(2) {
-        margin-right: 0;
-        float: right;
+    .side {
+        display: inline-block;
+        max-width: 100%;
     }
 
-    /* Need to increase the size of the image */
-    .gallery li:nth-of-type(3) {
-        width: 100%;
-        margin-bottom: 20px;
+    .pandas-description,
+    .marco-description {
+        width: 80%;
+    }
+
+    .marco-description {
+        padding-left: 0;
     }
     
-    /* .side p,
+    .side p,
     .pandas-description p,
     .marco-description p {
         font-size: 1.6rem;
         max-width: 90%;
         margin: 0 auto;
-    } */
-
-    
+    }
 
     .about figure {
         display: none;
@@ -599,11 +623,56 @@ button[type="submit"]:hover {
     }
 
     .contact {
-        width: calc(50% - 10px);
+        width: calc(70% - 10px);
     }
 
     .links {
-        width: 50%;
+        width: 30%;
+    }
+}
+
+@media (max-width: 575px) {
+    header {
+        background-size: 900px 930px;
     }
 
+    .pandas-description {
+        padding-top: 70%;
+    }
+
+    .pandas > img:nth-child(1),
+    .marco-now > img:nth-child(1) {
+        margin: 0;
+        width: 100%;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .icons {
+        text-align: center;
+    }
+
+    .logos {
+        float: none;
+        width: 100%;
+    }
+    
+    .logos i {
+        font-size: 7rem;
+    }
+
+    .newsletter h2, 
+    .newsletter p {
+        text-align: center;
+        margin: 0 auto;
+    }
 }
