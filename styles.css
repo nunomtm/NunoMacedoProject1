@@ -59,11 +59,27 @@ button {
     text-align: center;
     text-transform: uppercase;
     line-height: 29px;
-    color: #fff;
+    color: #D6F1E4;
     background-color: #116500;
-    border: #116500;
+    border: 1px solid #fff;
     padding: 10px 30px;
 }
+
+/* Skip-line for accessibility */
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+/* - */
+
 /* Global Styles Ends Here */
 
 
@@ -74,6 +90,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 90vh;
+    position: relative;
 }
 
 /* Hamburber menu for the mobile version */
@@ -91,14 +108,14 @@ header {
     font-size: 2rem;
     color: #fff;
     width: 120px;
-    float: left;
-    padding: 10px 15px;
+    padding: 10px 0;
     margin: 0;
+    float: left;
 }
 
-nav {
+nav ul {
     float: right;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 nav li {
@@ -128,14 +145,20 @@ nav a:hover {
     border-bottom: 3px solid #116500;
 }
 
-.headline {
-    float: left;
-    margin-left: 12.5%;
-}
+.headline h1 {
+    margin: 0;
+    padding-top: 10%;
+}   
 
 .social {
-    float: right;
+    right: 0;
+    top: 60px;
     padding: 5% 2% 0 0;
+    position: absolute;
+}
+
+.social a {
+    text-decoration: none;
 }
 
 .social i {
@@ -149,6 +172,7 @@ nav a:hover {
 
 .social i:hover {
     color: #116500;
+    transform: scale(1.3);
 }
 /* Header Styles Ends Here */
 
@@ -157,7 +181,7 @@ nav a:hover {
 
 /* About Styles Ends Here */
 .about {
-    background-color: #D6F1E4;
+    background-color: #d6f1e4;
 }
 
 .tittle {
@@ -199,7 +223,7 @@ figure {
 }
 
 .side button:hover {
-    background-color: #fff;
+    background-color: #D6F1E4;
     border: 1px solid #116500;
     color: #213C28;
 }
@@ -224,7 +248,7 @@ figure {
 
 
 /* Blog Styles Starts Here */
-.meet-pandas {
+.blog {
     background-color: #213C28;
 }
 
@@ -233,28 +257,28 @@ figure {
     padding: 0;
 }
 
-.meet-pandas h2,
-.meet-pandas p {
+.blog h2,
+.blog p {
     color: #fff;
 }
 
-.meet-pandas h2 {
+.blog h2 {
     padding: 60px 0;
 }
 
-.meet-pandas p {
+.blog p {
     width: 95%;
     margin: 0;
     padding-bottom: 60px;
 }
 
-.meet-pandas button {
+.blog button {
     background-color: #fff;
     color: #116500;
     transition: 0.25s;
 }
 
-.meet-pandas button:hover {
+.blog button:hover {
     background-color: #116500;
     color: #fff;
 }
@@ -291,7 +315,7 @@ figure {
 }
 
 .icons i {
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: #213C28;
     transition: 0.25s;
 }
@@ -313,13 +337,18 @@ figure {
 }
 
 .icons h4:hover {
-    color: #213C28;
+    color: #2C2D2C;
 }
 
 .logos {
     float: left;
     width: calc(100% / 3);
     text-align: center;
+    transition: 0.25;
+}
+
+.logos:hover {
+    transform: scale(1.1);
 }
 
 .logos:nth-of-type(3) {
@@ -383,15 +412,15 @@ footer p {
 .contact h2,
 .links a {
     width: 70%;
-    border-bottom: 3px solid transparent;
-    transition: 0.2s;
+    border-bottom: 4px solid transparent;
+    transition: 0.25s;
 }
 
 .newsletter h2:hover,
 .contact h2:hover,
 .links a:hover {
-    width: 70%;
-    border-bottom: 3px solid #116500;
+    width: 50%;
+    border-bottom: 4px solid #116500;
 }
 
 input[type="email"] {
@@ -433,13 +462,11 @@ button[type="submit"]:hover {
 /* Footer styles Ends Here */
 
 
-/* /* - RESPONSIVE DESIGN STARTS BELOW - */
+/* - RESPONSIVE DESIGN STARTS BELOW - */
+
+/* Bring the text on mobile to left and not center */
 
 @media (max-width: 1350px) {
-    header {
-        background-size: 1350px 930px;
-    }
-
     .headline h1 {
         font-size: 4.88rem;
     }
@@ -468,7 +495,6 @@ button[type="submit"]:hover {
         visibility: hidden;
         display: none;
     }
-
 }
 
 @media (max-width: 1300px) {
@@ -492,7 +518,6 @@ button[type="submit"]:hover {
         width: 80%;
     }
 
-    /* To invert the image and text */
     .pandas-container {
         position: relative;
     }
@@ -532,10 +557,6 @@ button[type="submit"]:hover {
         max-width: 300px;
     }
 
-    header {
-        background-size: 1000px 930px;
-    }
-
     #about > div:nth-child(1) > div:nth-child(3) > figure:nth-child(1) {
         max-width: 100%;
         margin-left: 30%;
@@ -543,7 +564,7 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 880px){
-     .logo {
+    .logo {
         font-size: 1.5rem;
     }
 
@@ -582,9 +603,8 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
-    /* Need to resize the background image */
     header {
-        background-size: 1024px 930px;
+        background-position: 60% 70%;
     }
 
     .side {
@@ -631,13 +651,26 @@ button[type="submit"]:hover {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 766px) {
     header {
-        background-size: 900px 930px;
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .side p {
+        margin: 0;
+        text-align: left;
     }
 
     .pandas-description {
         padding-top: 70%;
+    }
+
+    .pandas-description p,
+    .marco-description p {
+        margin: 0;
+        text-align: left;
     }
 
     .pandas > img:nth-child(1),
@@ -676,3 +709,5 @@ button[type="submit"]:hover {
         margin: 0 auto;
     }
 }
+
+/* End of Responsive Queries */
