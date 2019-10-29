@@ -145,9 +145,13 @@ nav a:hover {
     border-bottom: 3px solid #116500;
 }
 
+.headline {
+    clear: both;
+}
+
 .headline h1 {
     margin: 0;
-    padding-top: 10%;
+    padding-top: 5%;
 }   
 
 .social {
@@ -172,16 +176,16 @@ nav a:hover {
 
 .social i:hover {
     color: #116500;
-    transform: scale(1.3);
+    transform: scale(1.4);
 }
 /* Header Styles Ends Here */
 
 
-/* /* - Main Styles Starts Here - */ */
+/* - Main Styles Starts Here - */
 
-/* About Styles Ends Here */
-.about {
-    background-color: #d6f1e4;
+/* About Styles Starts Here */
+.aboutSection {
+    background-color: #D6F1E4;
 }
 
 .tittle {
@@ -193,6 +197,7 @@ nav a:hover {
     margin: 0;
     padding: 60px 0;
 }
+
 
 .gallery li {
     float: left;
@@ -223,7 +228,7 @@ figure {
 }
 
 .side button:hover {
-    background-color: #D6F1E4;
+    background-color: #fff;
     border: 1px solid #116500;
     color: #213C28;
 }
@@ -283,10 +288,11 @@ figure {
     color: #fff;
 }
 
+/* Should change to position absolut for the img instead of floating them */
 .pandas-description {
     float: left;
-    width: calc(50% - 12.5%);
-    margin-left: 12.5%;
+    width: calc(50% - 15.9%);
+    margin-left: 15.9%;
 }
 
 .pandas img {
@@ -296,9 +302,9 @@ figure {
 
 .marco-description {
     float: right;
-    width: calc(50% - 12.5%);
-    margin-right: 12.5%;
-    padding-left: 60px;
+    width: calc(50% - 15.9%);
+    margin-right: 15.9%;
+    padding-left: 40px;
 }
 
 .marco-now img {
@@ -604,7 +610,8 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
     header {
-        background-position: 70% 50%;
+        background-image: url(./Panda-Sanctuary-assets/header-image-mobile.jpg);
+        /* background-position: bottom right 40%; */
     }
 
     .side {
@@ -658,6 +665,7 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 575px) {
+
     .side p {
         margin: 0;
         text-align: left;
