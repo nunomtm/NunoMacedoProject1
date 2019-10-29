@@ -255,11 +255,7 @@ figure {
 /* Blog Styles Starts Here */
 .blog {
     background-color: #213C28;
-}
-
-.pandas-container {
-    margin: 0;
-    padding: 0;
+    position: relative;
 }
 
 .blog h2,
@@ -272,7 +268,6 @@ figure {
 }
 
 .blog p {
-    width: 95%;
     margin: 0;
     padding-bottom: 60px;
 }
@@ -288,27 +283,30 @@ figure {
     color: #fff;
 }
 
-/* Should change to position absolut for the img instead of floating them */
-.pandas-description {
-    float: left;
-    width: calc(50% - 15.9%);
-    margin-left: 15.9%;
+.pandas-description,
+.marco-description {
+    height: 37.5vw;
 }
 
-.pandas img {
-    float: right;
-    width: 50%;
+.pandas-description {
+    width: 48%;
 }
 
 .marco-description {
-    float: right;
-    width: calc(50% - 15.9%);
-    margin-right: 15.9%;
-    padding-left: 40px;
+    margin-left: 53%;
+}
+
+.pandas img {
+    position: absolute;
+    top: 0;
+    right: 0;   
+    width: 50%;
 }
 
 .marco-now img {
-    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 50%;
 }
 /* Blog Styles Ends Here */
@@ -477,18 +475,9 @@ button[type="submit"]:hover {
         font-size: 4.88rem;
     }
 
-    .about figure,
-    .side {
+    .about figure {
         float: none;
         margin: 0 auto;
-    }
-
-    .side {
-        text-align: center;
-    }
-
-    .side button {
-        margin-bottom: 40px;
     }
 
     .social {
@@ -504,44 +493,36 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 1300px) {
-    .pandas-description,
-    .pandas img,
-    .marco-now img,
-    .marco-description {
-        float: none;
+    .pandas-container,
+    .marco-container {
+        position: relative;
+        height: 100vh;
     }
 
-    .pandas-description,
-    .marco-description {
+    .pandas-description {
+        position: absolute;
+        margin-top: 58%;
         text-align: center;
-        margin: 0 auto;
-        width: 60%;
+        width: 100%;
+        padding: 0 10%;
     }
 
     .pandas img,
     .marco-now img {
-        margin: 0 auto;
         width: 80%;
-    }
-
-    .pandas-container {
-        position: relative;
-    }
-
-    .pandas-description {
-        padding-top: 60%;
-    }
-
-    .pandas {
-        position: absolute;
+        margin: 0 auto;
         top: 0;
-        left: 0;
+        right: 0;
         bottom: 0;
-        width: 100%;
+        left: 0;
     }
 
-    .pandas-container button {
-        margin-bottom: 60px;
+    .marco-description {
+        position: absolute;
+        text-align: center;
+        margin-top: 58%;
+        margin-left: 0;
+        padding: 0 10%;
     }
 }
 
@@ -567,13 +548,15 @@ button[type="submit"]:hover {
         max-width: 100%;
         margin-left: 30%;
     }
+
+    .side {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 10%;
+    }
 }
 
 @media (max-width: 880px){
-    .logo {
-        font-size: 1.5rem;
-    }
-
     .main-nav i {
         top: 1%;
     }
@@ -610,34 +593,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
     header {
-        background-image: url(./Panda-Sanctuary-assets/header-image-mobile.jpg);
-        /* background-position: bottom right 40%; */
-    }
-
-    .side {
-        display: inline-block;
-        max-width: 100%;
-    }
-
-    .pandas-description,
-    .marco-description {
-        width: 80%;
-    }
-
-    .marco-description {
-        padding-left: 0;
-    }
-    
-    .side p,
-    .pandas-description p,
-    .marco-description p {
-        font-size: 1.6rem;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    .about figure {
-        display: none;
+        background-position: 50%;
     }
 
     .newsletter {
@@ -658,26 +614,46 @@ button[type="submit"]:hover {
     }
 }
 
-@media (max-width: 766px) {
-    /* header {
-        background-size: 100% 100%;
-    } */
-}
-
 @media (max-width: 575px) {
+    header {
+        background-image: url(./Panda-Sanctuary-assets/Panda-Sanctuary-mobile.jpg);
+        background-position: 100%;
+    }
+
+    .about figure {
+        display: none;
+    }
+
+    .side {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #about > div:nth-child(1) > div:nth-child(3) > figure:nth-child(1) > img:nth-child(1) {
+        display: none;
+    }
 
     .side p {
         margin: 0;
         text-align: left;
     }
 
-    .pandas-description {
-        padding-top: 70%;
+    .side button {
+        margin-bottom: 30px;
+    }
+
+    .pandas-description,
+    .marco-description {
+        margin-top: 70%;
+    }
+
+    .marco-description {
+        left: 10%;
+        padding: 0;
     }
 
     .pandas-description p,
     .marco-description p {
-        margin: 0;
         text-align: left;
     }
 
@@ -716,6 +692,10 @@ button[type="submit"]:hover {
         text-align: center;
         margin: 0 auto;
     }
+}
+
+@media (max-width: 375px) {
+    
 }
 
 /* End of Responsive Queries */
